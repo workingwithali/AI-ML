@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Matrix Calculator</title>
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+  <h1>Matrix Calculator (NumPy + Flask)</h1>
+  <form method="post">
+    <label>Matrix A:</label>
+    <textarea name="matrixA" required></textarea>
+
+    <label>Operation:</label>
+    <select name="operation">
+      <option value="add">Addition</option>
+      <option value="subtract">Subtraction</option>
+      <option value="multiply">Multiplication</option>
+      <option value="transpose">Transpose (Matrix A only)</option>
+      <option value="inverse">Inverse (Matrix A only)</option>
+    </select>
+
+    <div id="matrixB-container">
+      <label>Matrix B:</label>
+      <textarea name="matrixB"></textarea>
+    </div>
+
+    <button type="submit">Calculate</button>
+  </form>
+
+  {% if error %}
+    <p class="error">{{ error }}</p>
+  {% endif %}
+
+  {% if result is not none %}
+    <div class="result">
+      <h3>Result:</h3>
+      <pre>{{ result }}</pre>
+    </div>
+  {% endif %}
+
+  <script src="../static/script.js"></script>
+</body>
+</html>
