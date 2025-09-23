@@ -1,33 +1,104 @@
-body {
-  font-family: Arial, sans-serif;
-  padding: 20px;
-  background: #f4f4f9;
+/* Reset & basics */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-h1 {
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #e0e7ff, #f4f4f9);
   color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+/* Container */
+.container {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 16px;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  transition: 0.3s ease-in-out;
+}
+
+.container:hover {
+  transform: translateY(-4px);
+}
+
+/* Title */
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #1e293b;
+  text-align: center;
+}
+
+/* Form styling */
+.calculator-form label {
+  display: block;
+  font-weight: 600;
+  margin: 12px 0 6px;
+  color: #374151;
+}
+
+textarea, select, button {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 16px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Inputs */
+textarea:focus, select:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 6px rgba(99, 102, 241, 0.4);
 }
 
 textarea {
-  width: 300px;
-  height: 100px;
-  margin-bottom: 10px;
-  display: block;
+  resize: vertical;
+  min-height: 90px;
 }
 
-select, button {
-  margin: 10px 0;
-  padding: 8px;
+/* Button */
+button {
+  background: #6366f1;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: 0.3s;
 }
 
+button:hover {
+  background: #4f46e5;
+}
+
+/* Result box */
 .result {
-  background: #fff;
-  padding: 15px;
+  background: #f9fafb;
+  padding: 20px;
+  border-radius: 12px;
   margin-top: 20px;
-  border-radius: 8px;
-  white-space: pre-wrap; /* keeps formatting of matrix */
+  border-left: 4px solid #6366f1;
+  font-family: monospace;
+  white-space: pre-wrap;
+  overflow-x: auto;
 }
 
+/* Error message */
 .error {
-  color: red;
+  color: #dc2626;
+  font-weight: 600;
+  margin-top: 10px;
+  text-align: center;
 }

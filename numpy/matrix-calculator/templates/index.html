@@ -1,43 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Matrix Calculator</title>
   <link rel="stylesheet" href="../static/style.css">
 </head>
 <body>
-  <h1>Matrix Calculator (NumPy + Flask)</h1>
-  <form method="post">
-    <label>Matrix A:</label>
-    <textarea name="matrixA" required></textarea>
+  <div class="container">
+    <h1>✨ Matrix Calculator (NumPy + Flask)</h1>
+    <form method="post" class="calculator-form">
+      <label for="matrixA">Matrix A:</label>
+      <textarea id="matrixA" name="matrixA" placeholder="Enter rows separated by newlines, values by spaces" required></textarea>
 
-    <label>Operation:</label>
-    <select name="operation">
-      <option value="add">Addition</option>
-      <option value="subtract">Subtraction</option>
-      <option value="multiply">Multiplication</option>
-      <option value="transpose">Transpose (Matrix A only)</option>
-      <option value="inverse">Inverse (Matrix A only)</option>
-    </select>
+      <label for="operation">Operation:</label>
+      <select id="operation" name="operation">
+        <option value="add">➕ Addition</option>
+        <option value="subtract">➖ Subtraction</option>
+        <option value="multiply">✖ Multiplication</option>
+        <option value="transpose">🔄 Transpose (Matrix A only)</option>
+        <option value="inverse">🔁 Inverse (Matrix A only)</option>
+      </select>
 
-    <div id="matrixB-container">
-      <label>Matrix B:</label>
-      <textarea name="matrixB"></textarea>
-    </div>
+      <div id="matrixB-container">
+        <label for="matrixB">Matrix B:</label>
+        <textarea id="matrixB" name="matrixB" placeholder="Only required for operations with B"></textarea>
+      </div>
 
-    <button type="submit">Calculate</button>
-  </form>
+      <button type="submit">🚀 Calculate</button>
+    </form>
 
-  {% if error %}
-    <p class="error">{{ error }}</p>
-  {% endif %}
+    {% if error %}
+      <p class="error">⚠ {{ error }}</p>
+    {% endif %}
 
-  {% if result is not none %}
-    <div class="result">
-      <h3>Result:</h3>
-      <pre>{{ result }}</pre>
-    </div>
-  {% endif %}
-
+    {% if result is not none %}
+      <div class="result">
+        <h3>✅ Result:</h3>
+        <pre>{{ result }}</pre>
+      </div>
+    {% endif %}
+  </div>
   <script src="../static/script.js"></script>
 </body>
 </html>
