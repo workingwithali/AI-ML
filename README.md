@@ -59,7 +59,7 @@ The roadmap PDF is designed to serve as a **step-by-step guide** for anyone who 
 |-----------------|------------------------|-------------|
 | Python          | YouTube (Hindi/Eng)    | [CodeWithHarry – 100 Days of Code](https://www.youtube.com/@CodeWithHarry) |
 | NumPy           | YouTube                | [Chai aur Numpy](https://www.youtube.com/watch?v=x7ULDYs4X84&t=1883s) |
-| Pandas          | YouTube                | [Part-1](https://www.youtube.com/watch?v=qrMnoY8qBJM)[Part-2](https://www.youtube.com/watch?v=0T9qhK5wBqI) |
+| Pandas          | YouTube                | [Part-1](https://www.youtube.com/watch?v=qrMnoY8qBJM)->[Part-2](https://www.youtube.com/watch?v=0T9qhK5wBqI) |
 | Math            | Notes & Books          | Linear Algebra Notes, Hines Book, Play with Graphs |
 | ML Theory       | Book                   | Hands-On ML with Scikit-Learn, TensorFlow |
 | Visualization   | Python Libraries       | Matplotlib, Seaborn |
